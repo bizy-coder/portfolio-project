@@ -1,0 +1,50 @@
+body {
+  background-color: #f5f5f4; /* Set your desired background color here */
+  margin: 0;
+  padding: 0;
+  font-family: Inter,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+  /* font-family: Lora,ui-serif,Georgia,Cambria,Times New Roman,Times,serif */
+  /* font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+
+	/* color: #7b7b78; */
+	/* color: #2b2b2b; */
+	/* color: #919190; */
+	color: #686868;
+	direction:ltr;
+	text-align:justify;
+	font-size: small;
+	line-height: 1.7;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+h1 {
+	color: #585e68;
+}
+
+h2 {
+	color: #585e68;
+	font-size: small;
+}
+
+h3 {
+	color: #585e68;
+	font-size: small;
+	padding-bottom:0px;
+	margin-bottom:0px;
+}
+
+h4 {
+	color: #b2b2b1;
+	font-size: 12px;
+	font-weight: lighter;
+	margin-top:0px;
+	padding-top:0px;
+}
+
+a:link, a:visited {
+	color: #919190;
+	font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+	/* font-weight: bold; */
+	/* font-size: small; */
+}
