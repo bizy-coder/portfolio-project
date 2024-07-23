@@ -54,16 +54,18 @@
   }
 
   .view-all {
-    font-size: 0.9rem;
-    background-color: #7a7878;
-    border: 1px solid #ddd;
+    font-size: 1rem;
+    /* background-color: #7a7878; */
+    background-image: linear-gradient(to right, #4e4c4c, #5e6c6c);
+
+    border: 1px solid #5e5c5c;
     color: white;
-    border-radius: 14px;
-    padding: 1rem;
+    border-radius: 1rem;
+    padding: 0.6rem 0.9rem 0.6rem 0.9rem;
     text-decoration: none;
     text-align: center;
     margin: auto;
-    width: calc(22% - 1rem);
+    width: calc(25% - 1rem);
     transition:
       transform 0.2s,
       box-shadow 0.2s;
@@ -155,7 +157,7 @@
   .project-card {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    border-radius: 14px;
+    border-radius: 1rem;
     padding: 1rem;
     text-decoration: none;
     color: inherit;

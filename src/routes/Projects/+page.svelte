@@ -22,8 +22,8 @@
     { component: AirportDatabase, name: "Airport  Management System" },
     { component: Geolocation, name: "AI Geolocation" },
     { component: AdversarialNLP, name: "Adversarial NLP" },
-    { component: Fibermorph, name: "Hair Analysis" },
-    { component: KattisContestReplay, name: "Kattis Contest Replay" },
+    { component: Fibermorph, name: "Hair Image Analysis" },
+    { component: KattisContestReplay, name: "Contest Replays" },
     { component: MaxLeafSpanningTree, name: "Maximum Leaf Trees" },
     { component: PhysicsCalculator, name: "Physics Calculator" },
     { component: Other, name: "Other Projects" },
@@ -161,7 +161,7 @@
   <div class="selection-panel">
     <ul>
       {#each links as link, i}
-        <li>
+        <li style="text-align: center">
           <a href="javascript:void(0);" on:click={() => goToIndex(i)}>{link}</a>
         </li>
       {/each}

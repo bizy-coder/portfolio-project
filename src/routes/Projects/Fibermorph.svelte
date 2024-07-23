@@ -3,7 +3,7 @@
 
 <div class="container">
   <div class="header">
-    <h1>Hair Curvature Analysis</h1>
+    <h1>Hair Image Curvature Analysis</h1>
   </div>
 
   <div class="overview">
