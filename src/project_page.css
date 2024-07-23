@@ -1,0 +1,96 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 0rem;
+}
+
+h2 {
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+}
+
+.overview {
+  margin-bottom: 0rem;
+}
+
+.content {
+  margin-bottom: 0rem;
+}
+
+p {
+  margin-top: 0rem;
+  margin-bottom: 0.8rem;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0rem;
+}
+
+.section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.text {
+  flex: 1;
+  padding-right: 2rem; /* Increase space between text and image */
+}
+
+.section:nth-child(even) .text {
+  padding-right: 0;
+  padding-left: 2rem; /* Adjust padding for reversed sections */
+}
+
+.image {
+  flex: 1;
+  text-align: center;
+  margin: 0; /* Remove horizontal margin */
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 0;
+  margin-top: 1.5rem;
+
+  padding: 0;
+  width: 100%;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
