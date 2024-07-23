@@ -18,6 +18,13 @@ body {
 	padding-right: 1rem;
 }
 
+ul {
+	text-align: left;
+}
+li {
+	text-align: left;
+}
+
 h1 {
 	color: #585e68;
 }

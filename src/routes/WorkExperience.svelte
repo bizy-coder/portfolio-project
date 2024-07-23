@@ -42,7 +42,7 @@
   <div class:extra-gap={index > 0}>
     <h3>{job.company}</h3>
     <h4>{job.role} <span>({job.period})</span></h4>
-    <p>{@html job.description}</p>
+    <p style="	text-align:left;">{@html job.description}</p>
   </div>
 {/each}
 
