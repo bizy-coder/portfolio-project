@@ -5,19 +5,30 @@
 <div class="footer">
   <h4 class="name">© 2024 Benjamin Zydney</h4>
   <div class="footer-links">
-    <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">
+    <a
+      href="https://github.com/bizy-coder"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <i class="fab fa-github"></i>
     </a>
-    <a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer">
+    <a
+      href="https://www.linkedin.com/in/ben-zydney"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <i class="fab fa-linkedin"></i>
     </a>
-    <a href="mailto:your-email@example.com">
+    <a href="mailto:zydney.biz11@example.com">
       <i class="fas fa-envelope"></i>
     </a>
   </div>
 </div>
 
-
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
 
 <style>
   .footer {
@@ -34,13 +45,13 @@
     position: absolute;
     bottom: 10px;
     left: 10px;
-	  font-size: 12px;
+    font-size: 12px;
     /* color: #585e68; */
     line-height: 0rem;
   }
 
   .footer-links {
-    	/* font-size: 2px; */
+    /* font-size: 2px; */
   }
 
   .footer .footer-links {
@@ -61,8 +72,3 @@
     color: #0073e6;
   }
 </style>
-
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-/>

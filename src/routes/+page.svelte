@@ -114,7 +114,7 @@
     margin-top: 3rem;
   }
   .section-header {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
     padding-bottom: 0rem;
     margin-bottom: 1rem;
   }

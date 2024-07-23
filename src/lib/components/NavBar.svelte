@@ -35,7 +35,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    backdrop-filter: blur(0.5px); /* Adjust the blur radius as needed */
+    backdrop-filter: blur(5px); /* Adjust the blur radius as needed */
     background-color: #f5f5f4df;
     height: 24px;
     padding-top: 13px;
