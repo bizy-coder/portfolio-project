@@ -11,7 +11,7 @@
     {
       title: "Science Olympiad <br/><p style='margin-top: 1.65em;'></p>",
       description:
-        "As a founding member of Penn State's Science Olympiad organization, I helped plan and host a national science tournament for high school students. We launched with an online event during the Covid pandemic and transitioned to an in-person tournament in subsequent years.<br><br>The event grew to host over 600 students from 10 states. My roles included designing the website, serving as Treasurer, and planning all pre-awards activities. This experience honed my skills in large-scale event management, clear communication across diverse groups, and leadership.",
+        "As a founding member of Penn State's Science Olympiad organization, I helped plan and host a national science tournament for high school students. We launched with an online event during the Covid pandemic and transitioned to an in-person tournament in subsequent years.<br><br>The event grew to host over 600 students from 10 states, and our team at Penn State grew from 4 founding members to well over 30. My roles included designing the website, serving as Treasurer, and planning and running all pre-awards activities. This experience honed my skills in large-scale event management, clear communication across diverse groups, and leadership.",
     },
     {
       title: "PSU Engineering Teaching & Research Experiences",
