@@ -155,7 +155,7 @@
   }
 
   .project-card {
-    background-color: #f9f9f9;
+    background-color: #f7f6f5;
     border: 1px solid #ddd;
     border-radius: 1rem;
     padding: 1rem;

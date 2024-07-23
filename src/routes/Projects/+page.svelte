@@ -272,7 +272,7 @@
 
   .carousel-card {
     /* min-height: 20rem; */
-    background-color: #f9f9f9;
+    background-color: #f7f6f5;
     border: 1px solid #ddd;
     border-radius: 24px;
     text-decoration: none;
