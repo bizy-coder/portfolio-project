@@ -27,11 +27,15 @@ li {
 
 h1 {
 	color: #585e68;
+	text-align: left;
+
 }
 
 h2 {
 	color: #585e68;
 	font-size: 0.9rem;
+	text-align: left;
+
 }
 
 h3 {
@@ -39,9 +43,13 @@ h3 {
 	font-size: small;
 	padding-bottom:0px;
 	margin-bottom:0px;
+	text-align: left;
+
 }
 
 h4 {
+	text-align: left;
+
 	color: #b2b2b1;
 	font-size: 0.75rem;
 	/* font-size: 12px; */
