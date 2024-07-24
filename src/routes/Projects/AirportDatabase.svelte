@@ -15,6 +15,7 @@
   }
 
   function closeModal(): void {
+    // alert("here");
     activeModal = null;
   }
 
@@ -129,14 +130,14 @@
   </div>
 </div>
 
-{#if activeModal}
+{#if activeModal !== null}
   <div class="modal-overlay" on:click={closeModal}>
     <div class="modal-content" on:click|stopPropagation>
       <img src={activeModal.src} alt={activeModal.alt} />
       <button class="close-button" on:click={closeModal}>×</button>
     </div>
   </div>
-{/if}
+{:else}{/if}
 
 <style>
   /* ... your existing styles ... */
@@ -147,7 +148,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,7 +164,7 @@
   .modal-content img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
+    /* object-fit: contain; */
   }
 
   .close-button {

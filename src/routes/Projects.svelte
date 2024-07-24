@@ -65,7 +65,8 @@
     text-decoration: none;
     text-align: center;
     margin: auto;
-    width: calc(25% - 1rem);
+    /* width: calc(25% - 1rem); */
+    width: 8.4rem;
     transition:
       transform 0.2s,
       box-shadow 0.2s;

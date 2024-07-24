@@ -31,6 +31,7 @@
     height: 2.5rem;
     padding-top: 1rem;
     width: var(--nav-width);
+    max-width: 95%;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -78,9 +79,9 @@
     content: "|";
     margin-left: 0.3rem;
   }
-  .right-nav {
+  /* .right-nav {
     margin-left: auto;
-  }
+  } */
   li {
     margin: 0;
   }
