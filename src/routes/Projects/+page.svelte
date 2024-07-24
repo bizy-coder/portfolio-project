@@ -44,13 +44,14 @@
   function updateSlide(newIndex: number) {
     scrollToTop();
     const items = carouselContent.children;
+    // setTimeout(() => {
     (items[currentIndex] as HTMLElement).style.opacity = "0";
     (items[currentIndex] as HTMLElement).style.display = "none";
     (items[newIndex] as HTMLElement).style.opacity = "1";
     (items[currentIndex] as HTMLElement).style.display = "flex";
+    // }, 0);
     (carouselContent as HTMLElement).style.transform =
       `translateX(-${newIndex * 100}%)`;
-
     const currentItem = (
       (items[newIndex] as HTMLElement).querySelector(
         ".carousel-card"
@@ -92,10 +93,14 @@
 
   function goToIndex(index: number) {
     updateSlide(index);
-    const projectName = links[index].toLowerCase().replace(/\s+/g, "-");
-    const newUrl = new URL(window.location.href);
-    newUrl.searchParams.set("project", projectName);
-    window.history.pushState({ index }, "", newUrl);
+
+    setTimeout(() => {
+      const projectName = links[index].toLowerCase().replace(/\s+/g, "-");
+      const newUrl = new URL(window.location.href);
+      newUrl.searchParams.set("project", projectName);
+
+      window.history.pushState({ index }, "", newUrl);
+    }, 20);
   }
 
   function handlePopState(event: PopStateEvent) {

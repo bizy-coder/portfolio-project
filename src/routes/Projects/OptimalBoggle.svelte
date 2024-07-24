@@ -1,6 +1,15 @@
-<script>
+<script lang="ts">
   import best_board from "$lib/assets/best_board_transparent.png";
   import hill_climb from "$lib/assets/transparent_background_board.gif";
+  import Modal from "./Modal.svelte";
+
+  let activeModal: { src: string; alt: string } | null = null;
+  let showModal = false;
+
+  function openModal(imageSrc: string, imageAlt: string): void {
+    activeModal = { src: imageSrc, alt: imageAlt };
+    showModal = true;
+  }
 </script>
 
 <div class="container">
@@ -39,11 +48,20 @@
       </div>
       <div class="image">
         <figure>
-          <img
-            src={best_board}
-            alt="Best Boggle Board"
-            style="width:105%; max-width:105%"
-          />
+          <button
+            class="dummy-button"
+            on:click={() => openModal(best_board, "Best Boggle Board")}
+            on:keydown={(e) => {
+              if (e.key === "Enter" || e.key === " ")
+                openModal(best_board, "Best Boggle Board");
+            }}
+          >
+            <img
+              src={best_board}
+              alt="Best Boggle Board"
+              style="width:105%; max-width:105%;"
+            />
+          </button>
           <figcaption>The highest scoring 4x4 Word Hunt board</figcaption>
         </figure>
       </div>
@@ -64,11 +82,20 @@
       </div>
       <div class="image">
         <figure>
-          <img
-            src={hill_climb}
-            alt="Hill Climb Animation"
-            style="width:105%; max-width:105%"
-          />
+          <button
+            class="dummy-button"
+            on:click={() => openModal(hill_climb, "Hill Climb Animation")}
+            on:keydown={(e) => {
+              if (e.key === "Enter" || e.key === " ")
+                openModal(hill_climb, "Hill Climb Animation");
+            }}
+          >
+            <img
+              src={hill_climb}
+              alt="Hill Climb Animation"
+              style="width:105%; max-width:105%;"
+            />
+          </button>
           <figcaption>Hill Climbing approach on a random board</figcaption>
         </figure>
       </div>
@@ -99,3 +126,8 @@
     </p>
   </div>
 </div>
+<Modal bind:showModal>
+  {#if activeModal}
+    <img src={activeModal.src} alt={activeModal.alt} />
+  {/if}
+</Modal>

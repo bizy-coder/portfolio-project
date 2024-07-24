@@ -2,27 +2,14 @@
   import { onMount } from "svelte";
   import admin_view from "$lib/assets/admin_view.png";
   import searchable_flights from "$lib/assets/searchable_flights_ui.png";
+  import Modal from "./Modal.svelte";
 
-  interface ModalData {
-    src: string;
-    alt: string;
-  }
-
-  let activeModal: ModalData | null = null;
+  let activeModal: { src: string; alt: string } | null = null;
+  let showModal = false;
 
   function openModal(imageSrc: string, imageAlt: string): void {
     activeModal = { src: imageSrc, alt: imageAlt };
-  }
-
-  function closeModal(): void {
-    // alert("here");
-    activeModal = null;
-  }
-
-  function handleKeydown(event: KeyboardEvent): void {
-    if (event.key === "Escape" && activeModal) {
-      closeModal();
-    }
+    showModal = true;
   }
 </script>
 
@@ -46,12 +33,20 @@
     <h2>Views</h2>
     <div class="image">
       <figure style="margin-bottom: 1rem;">
-        <img
-          src={admin_view}
-          alt="Admin View"
-          style="width:102%; max-width:102%; cursor: pointer;"
+        <button
+          class="dummy-button"
           on:click={() => openModal(admin_view, "Admin View")}
-        />
+          on:keydown={(e) => {
+            if (e.key === "Enter" || e.key === " ")
+              openModal(admin_view, "Admin View");
+          }}
+        >
+          <img
+            src={admin_view}
+            alt="Admin View"
+            style="width:102%; max-width:102%;"
+          />
+        </button>
         <figcaption>Admin View</figcaption>
       </figure>
     </div>
@@ -99,12 +94,20 @@
       </div>
       <div class="image">
         <figure>
-          <img
-            src={searchable_flights}
-            alt="Flight Search UI"
-            style="width:105%; max-width:105%; cursor: pointer;"
+          <button
+            class="dummy-button"
             on:click={() => openModal(searchable_flights, "Flight Search UI")}
-          />
+            on:keydown={(e) => {
+              if (e.key === "Enter" || e.key === " ")
+                openModal(searchable_flights, "Flight Search UI");
+            }}
+          >
+            <img
+              src={searchable_flights}
+              alt="Flight Search UI"
+              style="width:102%; max-width:102%;"
+            />
+          </button>
           <figcaption>Flight Search UI</figcaption>
         </figure>
       </div>
@@ -129,52 +132,11 @@
     </p>
   </div>
 </div>
-
-{#if activeModal !== null}
-  <div class="modal-overlay" on:click={closeModal}>
-    <div class="modal-content" on:click|stopPropagation>
-      <img src={activeModal.src} alt={activeModal.alt} />
-      <button class="close-button" on:click={closeModal}>×</button>
-    </div>
-  </div>
-{:else}{/if}
+<Modal bind:showModal>
+  {#if activeModal}
+    <img src={activeModal.src} alt={activeModal.alt} />
+  {/if}
+</Modal>
 
 <style>
-  /* ... your existing styles ... */
-
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-
-  .modal-content {
-    position: relative;
-    max-width: 90%;
-    max-height: 90%;
-  }
-
-  .modal-content img {
-    max-width: 100%;
-    max-height: 100%;
-    /* object-fit: contain; */
-  }
-
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-  }
 </style>

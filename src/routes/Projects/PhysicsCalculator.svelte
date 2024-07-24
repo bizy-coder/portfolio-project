@@ -1,7 +1,16 @@
-<script>
+<script lang="ts">
   // Import images if needed
   // import expression_tree from "$lib/assets/expression_tree.png";
   // import physics_equation from "$lib/assets/physics_equation.gif";
+  import Modal from "./Modal.svelte";
+
+  let activeModal: { src: string; alt: string } | null = null;
+  let showModal = false;
+
+  function openModal(imageSrc: string, imageAlt: string): void {
+    activeModal = { src: imageSrc, alt: imageAlt };
+    showModal = true;
+  }
 </script>
 
 <div class="container">
@@ -121,3 +130,8 @@
     </p>
   </div>
 </div>
+<Modal bind:showModal>
+  {#if activeModal}
+    <img src={activeModal.src} alt={activeModal.alt} />
+  {/if}
+</Modal>

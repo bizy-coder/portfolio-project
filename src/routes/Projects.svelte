@@ -83,55 +83,55 @@
   }
 
   .view-all:hover span:nth-child(1) {
-    animation-delay: 0s;
-  }
-  .view-all:hover span:nth-child(2) {
     animation-delay: 0.05s;
   }
-  .view-all:hover span:nth-child(3) {
+  .view-all:hover span:nth-child(2) {
     animation-delay: 0.1s;
   }
-  .view-all:hover span:nth-child(4) {
+  .view-all:hover span:nth-child(3) {
     animation-delay: 0.15s;
   }
-  .view-all:hover span:nth-child(5) {
+  .view-all:hover span:nth-child(4) {
     animation-delay: 0.2s;
   }
-  .view-all:hover span:nth-child(6) {
+  .view-all:hover span:nth-child(5) {
     animation-delay: 0.25s;
   }
-  .view-all:hover span:nth-child(7) {
+  .view-all:hover span:nth-child(6) {
     animation-delay: 0.3s;
   }
-  .view-all:hover span:nth-child(8) {
+  .view-all:hover span:nth-child(7) {
     animation-delay: 0.35s;
   }
-  .view-all:hover span:nth-child(9) {
+  .view-all:hover span:nth-child(8) {
     animation-delay: 0.4s;
   }
-  .view-all:hover span:nth-child(10) {
+  .view-all:hover span:nth-child(9) {
     animation-delay: 0.45s;
   }
-  .view-all:hover span:nth-child(11) {
+  .view-all:hover span:nth-child(10) {
     animation-delay: 0.5s;
   }
-  .view-all:hover span:nth-child(12) {
+  .view-all:hover span:nth-child(11) {
     animation-delay: 0.55s;
   }
-  .view-all:hover span:nth-child(13) {
+  .view-all:hover span:nth-child(12) {
     animation-delay: 0.6s;
   }
-  .view-all:hover span:nth-child(14) {
+  .view-all:hover span:nth-child(13) {
     animation-delay: 0.65s;
   }
-  .view-all:hover span:nth-child(15) {
+  .view-all:hover span:nth-child(14) {
     animation-delay: 0.7s;
   }
-  .view-all:hover span:nth-child(16) {
+  .view-all:hover span:nth-child(15) {
     animation-delay: 0.75s;
   }
-  .view-all:hover span:nth-child(17) {
+  .view-all:hover span:nth-child(16) {
     animation-delay: 0.8s;
+  }
+  .view-all:hover span:nth-child(17) {
+    animation-delay: 0.85s;
   }
 
   .view-all:hover span {

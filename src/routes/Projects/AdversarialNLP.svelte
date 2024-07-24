@@ -1,5 +1,14 @@
-<script>
+<script lang="ts">
   import confidence_scores from "$lib/assets/file4.png";
+  import Modal from "./Modal.svelte";
+
+  let activeModal: { src: string; alt: string } | null = null;
+  let showModal = false;
+
+  function openModal(imageSrc: string, imageAlt: string): void {
+    activeModal = { src: imageSrc, alt: imageAlt };
+    showModal = true;
+  }
 </script>
 
 <div class="container">
@@ -59,10 +68,20 @@
       </div>
       <div class="image">
         <figure>
-          <img
-            src={confidence_scores}
-            alt="Confidence Scores for Clean and Adversarial Examples"
-          />
+          <button
+            class="dummy-button"
+            on:click={() => openModal(confidence_scores, "confidence_scores")}
+            on:keydown={(e) => {
+              if (e.key === "Enter" || e.key === " ")
+                openModal(confidence_scores, "confidence_scores");
+            }}
+          >
+            <img
+              src={confidence_scores}
+              alt="confidence_scores"
+              style="width:102%; max-width:102%;"
+            />
+          </button>
           <figcaption>
             Confidence scores distribution for clean and adversarial examples
           </figcaption>
@@ -209,6 +228,12 @@
   </div>
   <!-- <div class="section"></div> -->
 </div>
+
+<Modal bind:showModal>
+  {#if activeModal}
+    <img src={activeModal.src} alt={activeModal.alt} />
+  {/if}
+</Modal>
 
 <style>
   .section {

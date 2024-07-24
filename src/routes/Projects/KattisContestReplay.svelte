@@ -1,7 +1,17 @@
-<script>
+<script lang="ts">
   // Import images if needed
   // import kattis_logo from "$lib/assets/kattis_logo.png";
   // import contest_replay from "$lib/assets/contest_replay.gif";
+
+  import Modal from "./Modal.svelte";
+
+  let activeModal: { src: string; alt: string } | null = null;
+  let showModal = false;
+
+  function openModal(imageSrc: string, imageAlt: string): void {
+    activeModal = { src: imageSrc, alt: imageAlt };
+    showModal = true;
+  }
 </script>
 
 <div class="container">
@@ -106,3 +116,8 @@
     </p>
   </div>
 </div>
+<Modal bind:showModal>
+  {#if activeModal}
+    <img src={activeModal.src} alt={activeModal.alt} />
+  {/if}
+</Modal>

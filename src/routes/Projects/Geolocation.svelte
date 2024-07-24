@@ -1,8 +1,17 @@
-<script>
+<script lang="ts">
   import geolocation_augmentations from "$lib/assets/geolocation_augmentations.png";
   import geolocation_predictions from "$lib/assets/geolocation_predictions.png";
   import geolocation_state_f1_scores from "$lib/assets/geolocation_state_f1_scores.png";
   import geolocation_top_k_accuracy from "$lib/assets/geolocation_top_k_accuracy.png";
+  import Modal from "./Modal.svelte";
+
+  let activeModal: { src: string; alt: string } | null = null;
+  let showModal = false;
+
+  function openModal(imageSrc: string, imageAlt: string): void {
+    activeModal = { src: imageSrc, alt: imageAlt };
+    showModal = true;
+  }
 </script>
 
 <div class="container">
@@ -55,11 +64,25 @@
       </div>
       <div class="image">
         <figure>
-          <img
-            src={geolocation_augmentations}
-            alt="Geolocation Augmentations"
-            style="width:105%; max-width:105%"
-          />
+          <button
+            class="dummy-button"
+            on:click={() =>
+              openModal(geolocation_augmentations, "Geolocation Augmentations")}
+            on:keydown={(e) => {
+              if (e.key === "Enter" || e.key === " ")
+                openModal(
+                  geolocation_augmentations,
+                  "Geolocation Augmentations"
+                );
+            }}
+          >
+            <img
+              src={geolocation_augmentations}
+              alt="Geolocation Augmentations"
+              style="width:105%; max-width:105%;"
+            />
+          </button>
+
           <figcaption>
             Examples of data augmentation techniques used during training
           </figcaption>
@@ -70,11 +93,22 @@
     <div class="section">
       <div class="image">
         <figure>
-          <img
-            src={geolocation_predictions}
-            alt="Geolocation Predictions"
-            style="width:100%; max-width:100%"
-          />
+          <button
+            class="dummy-button"
+            on:click={() =>
+              openModal(geolocation_predictions, "Geolocation Predictions")}
+            on:keydown={(e) => {
+              if (e.key === "Enter" || e.key === " ")
+                openModal(geolocation_predictions, "Geolocation Predictions");
+            }}
+          >
+            <img
+              src={geolocation_predictions}
+              alt="Geolocation Predictions"
+              style="width:100%; max-width:100%;"
+            />
+          </button>
+
           <figcaption>Example inputs and model predictions</figcaption>
         </figure>
       </div>
@@ -100,11 +134,21 @@
       </div>
       <div class="image">
         <figure>
-          <img
-            src={geolocation_state_f1_scores}
-            alt="State F1 Scores"
-            style="width:105%; max-width:105%"
-          />
+          <button
+            class="dummy-button"
+            on:click={() =>
+              openModal(geolocation_state_f1_scores, "State F1 Scores")}
+            on:keydown={(e) => {
+              if (e.key === "Enter" || e.key === " ")
+                openModal(geolocation_state_f1_scores, "State F1 Scores");
+            }}
+          >
+            <img
+              src={geolocation_state_f1_scores}
+              alt="State F1 Scores"
+              style="width:105%; max-width:105%;"
+            />
+          </button>
           <figcaption>F1 scores for each US state</figcaption>
         </figure>
       </div>
@@ -128,11 +172,22 @@
       </div>
       <div class="image">
         <figure>
-          <img
-            src={geolocation_top_k_accuracy}
-            alt="Top-k Accuracy"
-            style="width:105%; max-width:105%"
-          />
+          <button
+            class="dummy-button"
+            on:click={() =>
+              openModal(geolocation_top_k_accuracy, "Top-k Accuracy")}
+            on:keydown={(e) => {
+              if (e.key === "Enter" || e.key === " ")
+                openModal(geolocation_top_k_accuracy, "Top-k Accuracy");
+            }}
+          >
+            <img
+              src={geolocation_top_k_accuracy}
+              alt="Top-k Accuracy"
+              style="width:105%; max-width:105%;"
+            />
+          </button>
+
           <figcaption>
             Model accuracy for different values of k in top-k predictions
           </figcaption>
@@ -165,3 +220,8 @@
     </p>
   </div>
 </div>
+<Modal bind:showModal>
+  {#if activeModal}
+    <img src={activeModal.src} alt={activeModal.alt} />
+  {/if}
+</Modal>
