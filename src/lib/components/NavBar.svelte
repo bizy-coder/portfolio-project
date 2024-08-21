@@ -51,19 +51,32 @@
   nav::after {
     content: "";
     position: fixed;
-    top: 2.75rem; /* Same as nav height */
+    top: 2.71rem;
     left: 0;
     right: 0;
-    height: 1rem; /* Adjust this value to control the blur height */
-    background: linear-gradient(
-      to bottom,
-      rgba(241, 239, 231, 0.7) 100%,
-      rgba(241, 239, 231, 0.3) 100%
-    );
+    height: 0.9rem; /* Adjust this value to control the blur height */
+    background: transparent;
+    /* inset: -1px 0 0; */
     backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px); /* For Safari */
-    z-index: 9; /* Just below the nav */
-    pointer-events: none; /* Allows clicking through the blur */
+    -webkit-backdrop-filter: blur(4px);
+    /* background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.05) 10%,
+      rgba(255, 255, 255, 0.1) 20%,
+      rgba(255, 255, 255, 0.15) 30%,
+      rgba(255, 255, 255, 0.2) 40%,
+      rgba(255, 255, 255, 0.25) 50%,
+      rgba(255, 255, 255, 0.3) 60%,
+      rgba(255, 255, 255, 0.35) 70%,
+      rgba(255, 255, 255, 0.4) 80%,
+      rgba(255, 255, 255, 0.45) 90%,
+      rgba(255, 255, 255, 0.5) 100%
+    ); */
+
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.5;
   }
   .left-nav,
   .right-nav {

@@ -7,13 +7,13 @@
       period: "June 2021 - May 2024",
       description: `As the lead Learning Assistant for a class of 600 students, I:
         <ul style="margin-top:0.25rem">
-          <li>Created and delivered presentations on complex data structures topics</li>
-          <li>Led lectures, recitations, and provided one-on-one support during office hours</li>
           <li>Collaborated closely with the professor to design engaging course content</li>
           <ul>
-            <li>Developed over 30 new, original programming projects to enhance the curriculum</li>
+            <li>Developed over 30 new, original, programming projects to enhance the curriculum</li>
             <li>Crafted exam questions to test critical understanding of the material</li>
           </ul>
+            <li>Created and delivered presentations on complex data structures topics</li>
+            <li>Led lectures, recitations, and provided one-on-one support during office hours</li>
           <li>Independently organized and ran the class's main extra credit opportunity - a code golf challenge</li>
         </ul>`,
     },
