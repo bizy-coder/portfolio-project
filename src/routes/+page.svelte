@@ -16,7 +16,7 @@
     <!-- 🖐️ -->
     <h2 class="intro">Hi, I'm Ben <span class="wave">👋</span></h2>
     <p class="description">
-      I'm a recent Master's Computer Science graduate from Penn State, who loves
+      I'm a recent Computer Science Master's graduate from Penn State, who loves
       programming and puzzles and is planning to turn it into a career. I'm
       particularly interested in Algorithms and AI (especially AI security!),
       but also have done some work with graphics and compilers. I graduated May
